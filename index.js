@@ -5,7 +5,7 @@ import fs from "fs";
 async function run() {
   try {
     const functionName = core.getInput("function-name");
-    const package = core.getInput("package");
+    const zipPackage = core.getInput("zip-package");
 
     const awsAccessKeyId = core.getInput("aws-access-key-id");
     const awsSecretAccessKey = core.getInput("aws-secret-access-key");
@@ -15,7 +15,7 @@ async function run() {
 
     console.log(`Deploying ${functionName}...`);
 
-    var zipBuffer = fs.readFileSync(`./${package}`);
+    var zipBuffer = fs.readFileSync(`./${zipPackage}`);
     core.debug("ZIP file put into memory buffer.");
 
     const lambda = new aws.Lambda({

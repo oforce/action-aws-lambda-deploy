@@ -15,7 +15,7 @@ inputs:
     description: The name of the Lambda function
     required: true
 
-  package:
+  zip-package:
     description: ZIP package of Lambda and dependencies
 
   aws-access-key-id:
