@@ -1,0 +1,22 @@
+{
+  "name": "action-aws-lambda-deploy",
+  "version": "1.0.0",
+  "description": "A Github action to deploy an AWS lambda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js -o dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.2.2",
+    "@actions/exec": "^1.0.3",
+    "@actions/github": "^2.1.0",
+    "aws-sdk": "^2.617.0",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.21.1"
+  }
+}

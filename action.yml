@@ -1,0 +1,42 @@
+name: AWS Lambda Deploy
+author: Luke Ivie <luke.ivie@oforce.com>
+description: Deploys an AWS Lambda
+
+branding:
+  icon: cloud
+  color: orange
+
+runs:
+  using: "node12"
+  main: "dist/index.js"
+
+inputs:
+  function-name:
+    description: The name of the Lambda function
+    required: true
+
+  aws-region:
+    description: AWS region
+    default: us-west-1
+
+  aws-access-key-id:
+    description: AWS access key
+
+  aws-secret-access-key:
+    description: AWS secret key
+
+  aws-session-token:
+    description: AWS session token
+
+  aws-profile:
+    description: AWS profile
+
+  aws-role:
+    description: AWS IAM role
+
+  source-file:
+    description: The source file of the Lambda
+
+  environment:
+    description: Staging or production
+    required: true
